@@ -5,6 +5,8 @@ const { dbConnection } = require('./database/config.js');
 //crear servidor express
 const app = express();
 app.use(cors());
+
+app.use( express.static('public') );
 //lectura y parseo del body
 app.use(express.json());
 
